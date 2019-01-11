@@ -19,4 +19,20 @@ class PortfolioItemsController < ApplicationController
           end
         end
       end
+      def edit
+        @portfolio_item = PortfolioItem.find(params[:id])
+
+      end
+      def update
+        @portfolio_item = PortfolioItem.find(params[:id])
+        respond_to do |format|
+          if @portfolio_item.update(params.require(:portfolio_item).permit(:title, :subtitle, :thumb_image, :main_image, :body))
+            format.html { redirect_to portfolio_items_path, notice: 'Blog was successfully edited.' }
+            format.json { render :show, status: :ok, location: @portfolio_item }
+          else
+            format.html { render :edit }
+            format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+          end
+        end
+      end
 end
