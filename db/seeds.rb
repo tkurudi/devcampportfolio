@@ -1,3 +1,10 @@
+3.times do |topic|
+Topic.create!(
+    title: "Topic #{topic}"
+)
+end
+puts "3 Topics created"
+
 
 10.times do |i|
 Blog.create!(
@@ -8,7 +15,8 @@ Blog.create!(
          It has survived not only five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
           sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-           like Aldus PageMaker including versions of Lorem Ipsum."
+           like Aldus PageMaker including versions of Lorem Ipsum.",
+           topic_id: Topic.last.id
 )
 end
 puts "10 log posts created"
@@ -22,10 +30,10 @@ puts "10 log posts created"
 
     puts "5 skills created"
 
-9.times do |i|
+8.times do |i|
     PortfolioItem.create!(
         title: "Portfolio title: #{i+1}",
-        subtitle: "My great service",
+        subtitle: "Ruby on Rails",
         body: "It has survived not only five centuries, but also the leap into electronic typesetting,
         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
@@ -34,5 +42,18 @@ puts "10 log posts created"
         thumb_image: "http://placehold.it/350x200"
     )
     end
+
+    1.times do |i|
+        PortfolioItem.create!(
+            title: "Portfolio title: #{i+1}",
+            subtitle: "JavaScript",
+            body: "It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+             like Aldus PageMaker including versions of Lorem Ipsum",
+            main_image:"http://placehold.it/600x400",
+            thumb_image: "http://placehold.it/350x200"
+        )
+        end
 
     puts "9 portfolio items created"
