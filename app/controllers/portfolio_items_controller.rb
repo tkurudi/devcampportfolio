@@ -5,9 +5,10 @@ class PortfolioItemsController < ApplicationController
 
     def new
         @portfolio_item = PortfolioItem.new
+        3.times { @portfolio_item.technologies.build }
     end
     def create
-        @portfolio_item = PortfolioItem.new(params.require(:portfolio_item).permit(:title, :subtitle, :thumb_image, :main_image, :body))
+        @portfolio_item = PortfolioItem.new(params.require(:portfolio_item).permit(:title, :subtitle, :thumb_image, :main_image, :body, technologies_attributes: [:name]))
     
         respond_to do |format|
           if @portfolio_item.save
