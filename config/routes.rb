@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :portfolio_items
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
+  resources :portfolio_items, expect: [:show]
     
   
   get '/about', to: 'pages#about'
