@@ -1,13 +1,14 @@
 class PortfolioItemsController < ApplicationController
     def index 
-        @portfolio_items = PortfolioItem.all 
+        @portfolio_items = PortfolioItem.all
     end
 
     def new
         @portfolio_item = PortfolioItem.new
+        3.times { @portfolio_item.technologies.build }
     end
     def create
-        @portfolio_item = PortfolioItem.new(params.require(:portfolio_item).permit(:title, :subtitle, :thumb_image, :main_image, :body))
+        @portfolio_item = PortfolioItem.new(params.require(:portfolio_item).permit(:title, :subtitle, :thumb_image, :main_image, :body, technologies_attributes: [:name]))
     
         respond_to do |format|
           if @portfolio_item.save
@@ -36,10 +37,12 @@ class PortfolioItemsController < ApplicationController
         end
       end
       def show
-        @portfolio_item = PortfolioItem.friendly.find(params[:id])
+        @portfolio_item = PortfolioItem.find(params[:id])
       end
       def destroy
+        
         @portfolio_item = PortfolioItem.find(params[:id])
+        # @portfolio_item = PortfolioItem.find(1)
         
         @portfolio_item.destroy
         respond_to do |format|
