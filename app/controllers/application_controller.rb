@@ -3,4 +3,8 @@ class ApplicationController < ActionController::Base
     include DeviseWhitelist
     include SetSession
     include CurrentUserConcern
+    include DefaultPageContent
+
+
+
 end
