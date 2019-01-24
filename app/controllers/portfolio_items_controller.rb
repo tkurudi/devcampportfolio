@@ -24,12 +24,13 @@ class PortfolioItemsController < ApplicationController
       end
       def edit
         @portfolio_item = PortfolioItem.find(params[:id])
+     
 
       end
       def update
         @portfolio_item = PortfolioItem.find(params[:id])
         respond_to do |format|
-          if @portfolio_item.update(PortfolioItem_params)
+          if @portfolio_item.update(portfolioitem_params)
             format.html { redirect_to portfolio_items_path, notice: 'Portfolio item successfully edited.' }
             format.json { render :show, status: :ok, location: @portfolio_item }
           else
