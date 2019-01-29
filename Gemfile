@@ -61,3 +61,7 @@ gem 'friendly_id', '~> 5.2.4'
 #auth gem
 
 gem 'devise', '~> 4.5'
+
+##bootstrap gem
+
+gem 'bootstrap', '~> 4.2.1'
