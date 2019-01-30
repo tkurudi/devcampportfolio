@@ -65,3 +65,11 @@ gem 'devise', '~> 4.5'
 ##bootstrap gem
 
 gem 'bootstrap', '~> 4.2.1'
+
+##jquery
+
+gem 'jquery-rails'
+
+## my gem
+
+gem 'KurudiViewTool', git: 'https://github.com/tkurudi/KurudiViewTool'

@@ -4,7 +4,4 @@ class ApplicationController < ActionController::Base
     include SetSession
     include CurrentUserConcern
     include DefaultPageContent
-
-
-
 end

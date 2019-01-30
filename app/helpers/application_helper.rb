@@ -16,4 +16,8 @@ module ApplicationHelper
             end
     end
 
+    def copyright_generator 
+        KurudiViewTool::Renderer.copyright 'Tarun Kurudi', 'All rights reserved'
+ end
 end
+
