@@ -73,3 +73,7 @@ gem 'jquery-rails'
 ## my gem
 
 gem 'KurudiViewTool', git: 'https://github.com/tkurudi/KurudiViewTool'
+
+## petergate
+
+gem 'petergate', '~> 2.0.1'
