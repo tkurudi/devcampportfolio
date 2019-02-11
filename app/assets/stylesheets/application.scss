@@ -32,6 +32,8 @@ body {
   background-color: #333;
 }
 body {
+  display: -ms-flexbox;
+  display: flex;
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
@@ -166,6 +168,7 @@ body {
  */
 
  .card-block {
+   padding: 10px;
   color: black;
   text-align: left;
 }
@@ -176,4 +179,11 @@ body {
 
 .register-text {
   text-align: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+  
 }
