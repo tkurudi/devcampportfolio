@@ -64,7 +64,9 @@ gem 'devise', '~> 4.5'
 
 ##bootstrap gem
 
-gem 'bootstrap', '~> 4.2.1'
+# gem 'bootstrap', '~> 4.2.1'
+
+gem 'bootstrap', '4.0.0.alpha6'
 
 ##jquery
 
