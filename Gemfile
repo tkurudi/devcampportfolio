@@ -77,3 +77,11 @@ gem 'KurudiViewTool', git: 'https://github.com/tkurudi/KurudiViewTool'
 ## petergate
 
 gem 'petergate', '~> 2.0.1'
+
+##font aswome
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
+#kaminari
+
+gem 'kaminari'
