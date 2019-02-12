@@ -21,7 +21,7 @@
     <!-- start of masthead -->
    
 
-    <%= render 'shared/portfolio_masthead'%>
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)%>
     <!-- start of masthead -->
 
     <%= yield %>
